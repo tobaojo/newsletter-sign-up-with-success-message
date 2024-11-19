@@ -14,6 +14,7 @@ module.exports = {
         charcoalGrey: "hsl(235, 18%, 26%)",
         grey: "hsl(231, 7%, 60%)",
         tomato: "hsl(4, 100%, 67%)",
+        gradient: "linear-gradient(to bottom left, #FF6A3A, #FF527B)",
       },
     },
   },

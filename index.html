@@ -41,7 +41,8 @@
   <!-- Sign-up form start -->
 
   <section
-    class="hidden flex m-0 max-w-3xl mx-auto bg-white rounded-xl shadow-lg items-center gap-x-4 flex-col md:flex-row-reverse md:p-4">
+    class="flex m-0 max-w-5xl mx-auto bg-white rounded-xl shadow-lg items-center gap-x-4 flex-col md:flex-row-reverse md:p-4"
+    id="newsletter">
     <img src="assets/images/illustration-sign-up-mobile.svg" srcset="
         assets/images/illustration-sign-up-mobile.svg 768w,
         assets/images/illustration-sign-up-desktop.svg 1024w
@@ -68,11 +69,11 @@
       <form class="m-0" id="form" novalidate>
         <div class="w-full flex flex-col">
           <label for="email" class="my-2 mx-6 text-darkSlateGrey text-lg font-bold">Email address</label>
-          <p class="flex text-red-600 font-bold justify-end mr-8" id="error-message" aria-live="polite"></p>
+          <p class="flex text-tomato font-bold justify-end mr-8" id="error-message" aria-live="polite"></p>
           <input class="border border-grey rounded-md block w-10/12 p-4 self-center" type="email" name="email"
             id="email" placeholder="email@company.com">
           <input
-            class="bg-darkSlateGrey text-lg text-white p-4 m-6 w-10/12 rounded-md self-center align-middle hover:bg-charcoalGrey"
+            class="bg-darkSlateGrey text-lg text-white p-4 m-6 w-10/12 rounded-md self-center align-middle hover:bg-gradient-to-r from-[#FF6A3A] to-[#FF527B] hover:shadow-lg hover:cursor-pointer"
             id="submitBtn" type="submit" value="Subscribe to monthly newsletter" aria-label="Subscribe to newsletter">
         </div>
       </form>
@@ -84,17 +85,24 @@
 
   <!-- Success message start -->
   <div
-    class=" m-0 p-6 max-w-3xl mx-auto bg-white rounded-xl shadow-lg flex items-center gap-x-4 flex-col h-screen md:p-4">
-    <div class="self-start">
-      <img src="assets/images/icon-success.svg" alt="">
+    class="hidden m-0 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex flex-col items-start justify-between aspect-square"
+    id="response">
+    <div class="container flex flex-col w-full">
+      <img class="self-start mb-6 w-16 h-16 md:w-20 md:h-20" src="assets/images/icon-success.svg" alt="Success icon">
+      <h2 class="text-darkSlateGrey text-2xl font-bold mb-3">Thanks for subscribing!</h2>
+      <p class="text-darkSlateGrey text-base md:text-lg mb-7">
+        A confirmation email has been sent to <span class="font-bold whitespace-nowrap">ash@loremcompany.com</span>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
     </div>
-    <h2>Thanks for subscribing!</h2>
-
-    A confirmation email has been sent to ash@loremcompany.com.
-    Please open it and click the button inside to confirm your subscription.
-
-    Dismiss message
+    <button
+      class="bg-darkSlateGrey text-base sm:text-lg text-white p-3 sm:p-4 w-full sm:w-10/12 rounded-md hover:bg-gradient-to-r from-[#FF6A3A] to-[#FF527B] hover:shadow-lg mx-auto ease-linear hover:cursor-pointer"
+      id="dismiss">
+      Dismiss message
+    </button>
   </div>
+
+
 
 
   <!-- Success message end -->
