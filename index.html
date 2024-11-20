@@ -33,12 +33,14 @@
     <section
       class="flex m-0 max-w-5xl mx-auto bg-white rounded-xl shadow-lg items-center gap-x-4 flex-col md:flex-row-reverse md:p-4"
       id="newsletter">
-      <img src="assets/images/illustration-sign-up-mobile.svg" srcset="
-        assets/images/illustration-sign-up-mobile.svg 768w,
-        assets/images/illustration-sign-up-desktop.svg 1024w
-    " sizes="(min-width: 768px) 50vw, 100vw" alt="Illustration for sign-up" class="max-w-lg w-full">
+      <picture>
+        <source media="(min-width: 768px)" srcset="assets/images/illustration-sign-up-desktop.svg">
+        <source media="(max-width:767px )" srcset="assets/images/illustration-sign-up-mobile.svg">
+        <img class="w-full" src="assets/images/illustration-sign-up-mobile.svg" alt="">
+      </picture>
+
       <div>
-        <h1 class="text-4xl text-darkSlateGrey font-bold mx-6 my-5 justify-start self-start">Stay updated!</h1>
+        <h1 class="text-9xl text-darkSlateGrey font-bold mx-6 my-5 justify-start self-start">Stay updated!</h1>
         <p class="my-2 mx-6 text-darkSlateGrey text-lg font-normal">Join 60,000+ product managers receiving monthly
           updates
           on:</p>
