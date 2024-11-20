@@ -21,7 +21,8 @@ const handleSubmit = (e) => {
 
   const error = validateEmail(email);
   if (error) {
-    emailInput.classList.add("border-[tomato]", "bg-tomato");
+    emailInput.classList.add("border-red-500", "bg-tomato");
+    emailInput.classList.remove("border-grey");
     emailInput.style.backgroundColor = "#ebaaa0";
     emailInput.style.border = "hsl(4, 100%, 67%)";
     emailInput.style.color = "hsl(4, 100%, 67%)";
@@ -33,6 +34,7 @@ const handleSubmit = (e) => {
   errorMessage.textContent = "";
   newsLetter.classList.add("hidden");
   response.classList.remove("hidden");
+  emailInput.value = "";
 
   return;
 };

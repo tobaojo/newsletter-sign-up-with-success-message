@@ -32,7 +32,7 @@
   class="font-roboto m-0 flex flex-col md:bg-darkSlateGrey md:items-center md:h-screen md:justify-center md:space-y-10">
   <main id="main-content">
     <section
-      class="flex m-0 max-w-5xl mx-auto bg-white rounded-xl shadow-lg items-center gap-x-4 flex-col md:flex-row-reverse md:p-4"
+      class="flex m-0 mx-auto bg-white md:rounded-3xl shadow-lg md:items-center gap-x-4 flex-col md:flex-row-reverse md:p-4"
       id="newsletter">
       <picture>
         <source media="(min-width: 768px)" srcset="assets/images/illustration-sign-up-desktop.svg">
@@ -41,28 +41,29 @@
       </picture>
 
       <div>
-        <h1 class="text-9xl text-darkSlateGrey font-bold mx-6 my-5 justify-start self-start">Stay updated!</h1>
+        <h1 class="text-6xl text-darkSlateGrey font-bold mx-6 my-5 justify-start self-start">Stay updated!</h1>
         <p class="my-2 mx-6 text-darkSlateGrey text-lg font-normal">Join 60,000+ product managers receiving monthly
           updates
           on:</p>
         <ul class="space-y-4 mb-6 mt-4 mx-6 text-lg">
-          <li class="flex text-darkSlateGrey gap-4">
+          <li class="flex text-darkSlateGrey gap-4 font-medium">
             <img src="assets/images/icon-list.svg" alt="">
             Product discovery and building what matters
           </li>
-          <li class="flex text-darkSlateGrey gap-4">
+          <li class="flex text-darkSlateGrey gap-4 font-medium">
             <img src="assets/images/icon-list.svg" alt="">
             Measuring to ensure updates are a success
           </li>
-          <li class="flex text-darkSlateGrey gap-4">
+          <li class="flex text-darkSlateGrey gap-4 font-medium">
             <img src="assets/images/icon-list.svg" alt="">
             And much more!
           </li>
         </ul>
         <form class="m-0" id="form" novalidate>
-          <div class="w-full flex flex-col">
+          <div class="relative w-full flex flex-col">
             <label for="email" class="my-2 mx-6 text-darkSlateGrey text-lg font-bold">Email address</label>
-            <p class="flex text-tomato font-bold justify-end mr-8" id="error-message" aria-live="polite"></p>
+            <span class="absolute top-0 right-0  text-tomato font-bold justify-end mr-8" id="error-message"
+              aria-live="polite"></span>
             <input class="border border-grey rounded-md block w-10/12 p-4 self-center" type="email" name="email"
               id="email" placeholder="email@company.com">
             <input
@@ -78,11 +79,11 @@
 
     <!-- Success message start -->
     <div
-      class="hidden m-0 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex flex-col items-start justify-between aspect-square"
+      class="hidden m-0 p-12 max-w-xl mx-auto bg-white rounded-xl shadow-lg flex flex-col items-start justify-between aspect-square"
       id="response">
-      <div class="container flex flex-col w-full">
+      <div class="container flex flex-col w-full p-6">
         <img class="self-start mb-6 w-16 h-16 md:w-20 md:h-20" src="assets/images/icon-success.svg" alt="Success icon">
-        <h2 class="text-darkSlateGrey text-2xl font-bold mb-3">Thanks for subscribing!</h2>
+        <h2 class="text-darkSlateGrey text-6xl font-bold mb-3">Thanks for subscribing!</h2>
         <p class="text-darkSlateGrey text-base md:text-lg mb-7">
           A confirmation email has been sent to <span class="font-bold whitespace-nowrap">ash@loremcompany.com</span>.
           Please open it and click the button inside to confirm your subscription.
