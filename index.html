@@ -37,80 +37,79 @@
 
 <body
   class="font-roboto m-0 flex flex-col md:bg-darkSlateGrey md:items-center md:h-screen md:justify-center md:space-y-10">
-
-  <!-- Sign-up form start -->
-
-  <section
-    class="flex m-0 max-w-5xl mx-auto bg-white rounded-xl shadow-lg items-center gap-x-4 flex-col md:flex-row-reverse md:p-4"
-    id="newsletter">
-    <img src="assets/images/illustration-sign-up-mobile.svg" srcset="
+  <main id="main-content">
+    <section
+      class="flex m-0 max-w-5xl mx-auto bg-white rounded-xl shadow-lg items-center gap-x-4 flex-col md:flex-row-reverse md:p-4"
+      id="newsletter">
+      <img src="assets/images/illustration-sign-up-mobile.svg" srcset="
         assets/images/illustration-sign-up-mobile.svg 768w,
         assets/images/illustration-sign-up-desktop.svg 1024w
     " sizes="(min-width: 768px) 50vw, 100vw" alt="Illustration for sign-up" class="max-w-lg w-full">
-    <div>
-      <h1 class="text-4xl text-darkSlateGrey font-bold mx-6 my-5 justify-start self-start">Stay updated!</h1>
-      <p class="my-2 mx-6 text-darkSlateGrey text-lg font-normal">Join 60,000+ product managers receiving monthly
-        updates
-        on:</p>
-      <ul class="space-y-4 mb-6 mt-4 mx-6 text-lg">
-        <li class="flex text-darkSlateGrey gap-4">
-          <img src="assets/images/icon-list.svg" alt="">
-          Product discovery and building what matters
-        </li>
-        <li class="flex text-darkSlateGrey gap-4">
-          <img src="assets/images/icon-list.svg" alt="">
-          Measuring to ensure updates are a success
-        </li>
-        <li class="flex text-darkSlateGrey gap-4">
-          <img src="assets/images/icon-list.svg" alt="">
-          And much more!
-        </li>
-      </ul>
-      <form class="m-0" id="form" novalidate>
-        <div class="w-full flex flex-col">
-          <label for="email" class="my-2 mx-6 text-darkSlateGrey text-lg font-bold">Email address</label>
-          <p class="flex text-tomato font-bold justify-end mr-8" id="error-message" aria-live="polite"></p>
-          <input class="border border-grey rounded-md block w-10/12 p-4 self-center" type="email" name="email"
-            id="email" placeholder="email@company.com">
-          <input
-            class="bg-darkSlateGrey text-lg text-white p-4 m-6 w-10/12 rounded-md self-center align-middle hover:bg-gradient-to-r from-[#FF6A3A] to-[#FF527B] hover:shadow-lg hover:cursor-pointer"
-            id="submitBtn" type="submit" value="Subscribe to monthly newsletter" aria-label="Subscribe to newsletter">
-        </div>
-      </form>
+      <div>
+        <h1 class="text-4xl text-darkSlateGrey font-bold mx-6 my-5 justify-start self-start">Stay updated!</h1>
+        <p class="my-2 mx-6 text-darkSlateGrey text-lg font-normal">Join 60,000+ product managers receiving monthly
+          updates
+          on:</p>
+        <ul class="space-y-4 mb-6 mt-4 mx-6 text-lg">
+          <li class="flex text-darkSlateGrey gap-4">
+            <img src="assets/images/icon-list.svg" alt="">
+            Product discovery and building what matters
+          </li>
+          <li class="flex text-darkSlateGrey gap-4">
+            <img src="assets/images/icon-list.svg" alt="">
+            Measuring to ensure updates are a success
+          </li>
+          <li class="flex text-darkSlateGrey gap-4">
+            <img src="assets/images/icon-list.svg" alt="">
+            And much more!
+          </li>
+        </ul>
+        <form class="m-0" id="form" novalidate>
+          <div class="w-full flex flex-col">
+            <label for="email" class="my-2 mx-6 text-darkSlateGrey text-lg font-bold">Email address</label>
+            <p class="flex text-tomato font-bold justify-end mr-8" id="error-message" aria-live="polite"></p>
+            <input class="border border-grey rounded-md block w-10/12 p-4 self-center" type="email" name="email"
+              id="email" placeholder="email@company.com">
+            <input
+              class="bg-darkSlateGrey text-lg text-white p-4 m-6 w-10/12 rounded-md self-center align-middle hover:bg-gradient-to-r from-[#FF6A3A] to-[#FF527B] hover:shadow-lg hover:cursor-pointer"
+              id="submitBtn" type="submit" value="Subscribe to monthly newsletter" aria-label="Subscribe to newsletter">
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Sign-up form end -->
+
+
+
+    <!-- Success message start -->
+    <div
+      class="hidden m-0 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex flex-col items-start justify-between aspect-square"
+      id="response">
+      <div class="container flex flex-col w-full">
+        <img class="self-start mb-6 w-16 h-16 md:w-20 md:h-20" src="assets/images/icon-success.svg" alt="Success icon">
+        <h2 class="text-darkSlateGrey text-2xl font-bold mb-3">Thanks for subscribing!</h2>
+        <p class="text-darkSlateGrey text-base md:text-lg mb-7">
+          A confirmation email has been sent to <span class="font-bold whitespace-nowrap">ash@loremcompany.com</span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+      <button
+        class="bg-darkSlateGrey text-base sm:text-lg text-white p-3 sm:p-4 w-full sm:w-10/12 rounded-md hover:bg-gradient-to-r from-[#FF6A3A] to-[#FF527B] hover:shadow-lg mx-auto ease-linear hover:cursor-pointer"
+        id="dismiss">
+        Dismiss message
+      </button>
     </div>
-  </section>
-  <!-- Sign-up form end -->
+  </main>
 
 
-
-  <!-- Success message start -->
-  <div
-    class="hidden m-0 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex flex-col items-start justify-between aspect-square"
-    id="response">
-    <div class="container flex flex-col w-full">
-      <img class="self-start mb-6 w-16 h-16 md:w-20 md:h-20" src="assets/images/icon-success.svg" alt="Success icon">
-      <h2 class="text-darkSlateGrey text-2xl font-bold mb-3">Thanks for subscribing!</h2>
-      <p class="text-darkSlateGrey text-base md:text-lg mb-7">
-        A confirmation email has been sent to <span class="font-bold whitespace-nowrap">ash@loremcompany.com</span>.
-        Please open it and click the button inside to confirm your subscription.
-      </p>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        class="underline hover:text-blue-700 focus:text-blue-700">Frontend Mentor</a>.
+      Coded by <a href="#" class="underline hover:text-blue-700 focus:text-blue-700">Toba</a>.
     </div>
-    <button
-      class="bg-darkSlateGrey text-base sm:text-lg text-white p-3 sm:p-4 w-full sm:w-10/12 rounded-md hover:bg-gradient-to-r from-[#FF6A3A] to-[#FF527B] hover:shadow-lg mx-auto ease-linear hover:cursor-pointer"
-      id="dismiss">
-      Dismiss message
-    </button>
-  </div>
+  </footer>
 
-
-
-
-  <!-- Success message end -->
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Toba</a>.
-  </div>
 </body>
 
 </html>
